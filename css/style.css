@@ -1,0 +1,45 @@
+a{
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease; 
+}
+.blanco{
+    color: white;
+}
+.color-b1{
+    background-color: rgb(54, 54, 54);
+}
+
+.color-b2{
+    background-color: rgb(15, 15, 15);
+}
+
+.color-b3{
+    background-color: rgb(24, 24, 24);
+}
+
+.color-b4{
+    background-color: white;
+}
+
+.custom-shadow {
+    -webkit-box-shadow: 0px 0px 17px 7px rgb(81, 255, 37);
+    -moz-box-shadow: 0px 0px 17px 7px rgb(46, 217, 3);
+    box-shadow: 0px 0px 17px 7px rgb(28, 240, 9);
+}
+
+.fondo{
+    background-image: url("../img/fondo.jpg");
+
+}
+  
+header a:hover{
+
+    color: rgb(156, 156, 156);
+    transform: scale(1.1);
+}
+
+a:hover{
+
+    color: rgb(156, 156, 156);
+}

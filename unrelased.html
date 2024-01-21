@@ -120,32 +120,44 @@
           card.classList.add('col-12', 'rounded', 'row', 'm-2');
 
           card.innerHTML = `
-          <a href="${url}" target="_blank">
+         x
             <div class="col-12 row shadow py-2">
             
                     <div class="col-md-3 col-12 border rounded-start  border-3 p-0 m-0 d-flex align-items-center ">
                         <div id="carousel${i}" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
-                                <div class="carousel-item active flex" data-bs-interval="1800" >
+                                <div class="carousel-item active flex" data-bs-interval="${random}" >
                                     <img src="${imagen1}" class="d-block w-100" " alt="...">
                                 </div>
-                                <div class="carousel-item" data-bs-interval="1800">
+                                <div class="carousel-item" data-bs-interval="${random}">
                                     <img src="${imagen2}" class="d-block w-100" alt="...">
                                 </div>
-                                <div class="carousel-item" data-bs-interval="1800">
+                                <div class="carousel-item" data-bs-interval="${random}">
                                     <img src="${imagen3}" class="d-block w-100" alt="...">
                                 </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carousel${i}" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carousel${i}" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-9 col-12 border rounded-end blanco  border-3 color-b3 p-3">
+                        <a href="${url}" target="_blank">
                         <h3 class="text-center">${title}</h3>
                         <br>
                         <h5 class="ps-3">Descripcion:</h5>
                         <p class="ps-3">${description}</p>
+                        </a>
                     </div>
             </div>
-        </a>
+        
           `;
 
           cardContainer.appendChild(card);

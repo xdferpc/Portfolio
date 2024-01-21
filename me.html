@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>xdferpc</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="img/xdfer.png"> <!-- liqueo icono de la web-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body class="color-b1 fondo">
+    
+    <header class="p-2 d-flex justify-content-between align-items-center color-b2 border-bottom border-top border-white border-4">
+        <a href="index.html"><img class="ps-3" src="img/logo2.png" alt="" width="100"> </a>
+        <div class="px-2">
+            <a class="px-2 fs-4 fw-bold" href="index.html"> <span>Porfolio</span> </a>
+            <a class="px-2 fs-4 fw-bold" href="me.html"> <span>About Me</span></a>
+        </div>
+    </header>
+    <hr class="color-b4 mb-0" style="height: 5px;" />
+
+    <main class="container text-white">
+        <h1 class="text-center">About Me</h1>
+        <div class="row justify-content-center pt-3 align-items-stretch">
+            <div class="p-4 col-md-6 col-12 border rounded">
+                <img src="img/fondo2.jpg" class="w-100" alt="">
+            </div>
+            <div class="p-5 col-md-6 col-12 border-bottom">
+                <div class="pt-2">
+                    <p>I am <span id="informacionEdad"></span> years old and live in Spain, in Toledo</p>
+                    Level Designer & programmer & modeling enthusiast since 2016, I have mainly worked on Activision’s Call of Duty Black Ops 3 for the maps/mods
+                    I have created various maps as a hobby, giving my best effort in some of them.
+                    <p>I would like to work on it.</p>
+                    <p>In my day-to-day life, I have been and am a student of telecommunications and computer systems, specializing in multi-platform application development.</p>
+                    <p>Email: <a href="mailto:xdferpc@gmail.com">xdferpc@gmail.com</a></p> 
+                </div>
+                
+            </div>
+
+        </div>
+        <div class="my-5 row justify-content-center">
+            <form class="col-md-7 col-12 bg-dark border rounded py-3" action="https://formsubmit.co/xdferpcmini@gmail.com" method="POST">
+                <h1> Contact Me</h1>
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre:</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp" required>
+                </div>
+                <div class="mb-3">
+                  <label for="correo" class="form-label">Correo electrónico:</label>
+                  <input type="email"  class="form-control" id="correo" name="correo" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje">Mensaje:</label>
+                    <br/>
+                    <textarea id="mensaje" class="form-control" name="mensaje" rows="6" required></textarea>
+                </div>
+               
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        
+
+    </main>
+
+   
+    <hr class="color-b4 mt-0 " style="height: 5px;" />
+    <footer
+        class="p-2 color-b2 d-flex justify-content-between align-items-center border-bottom border-top border-white border-4">
+        <p class="text-white fs-4 pt-1 ps-3">xdferpc &copy;</p>
+        <div class="pe-2">
+            <a href="https://twitter.com/xdferpc"><i class="fa fa-twitter text-white fs-1 px-2"
+                    aria-hidden="true"></i></a>
+            <a href="https://steamcommunity.com/id/xdferpc/"><i class="fa fa-steam text-white fs-1 px-2"
+                    aria-hidden="true"></i></a>
+
+        </div>
+        
+
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+        
+
+    <script>
+        function actualizarEdad() {
+            // Obtener la fecha de nacimiento
+            var fechaNacimiento = new Date("1998-09-13"); // Reemplaza con tu fecha de nacimiento en el formato "YYYY-MM-DD"
+
+            // Obtener la fecha actual
+            var fechaActual = new Date();
+
+            // Calcular la diferencia de años
+            var edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+
+            // Verificar si ya ha pasado el cumpleaños de este año
+            if (fechaActual.getMonth() < fechaNacimiento.getMonth() ||
+                (fechaActual.getMonth() === fechaNacimiento.getMonth() && fechaActual.getDate() < fechaNacimiento.getDate())) {
+                edad--;
+            }
+
+            // Actualizar el contenido del párrafo
+            var informacionEdad = document.getElementById("informacionEdad");
+            informacionEdad.innerText = `${edad}`;
+        }
+
+        // Llamar a la función para la primera actualización
+        actualizarEdad();
+
+        // Configurar un temporizador para actualizar cada año (aproximadamente cada 1000 ms * 60 s * 60 min * 24 h * 365.25 d)
+        setInterval(actualizarEdad, 1000 * 60 * 60 * 24 * 365.25);
+    </script>
+</body>
+
+</html>

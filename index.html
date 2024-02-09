@@ -15,13 +15,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body class="color-b1 fondo">
+<body class="color-b1 fondo color-change-2x">
     
     <header class="p-2 d-flex justify-content-between align-items-center color-b2 border-bottom border-top border-white border-4">
         <a href="index.html"><img class="ps-3" src="img/logo2.png" alt="" width="100"> </a>
         <div class="px-2">
-            <a class="px-2 fs-4 fw-bold" href="index.html"> <span>Porfolio</span> </a>
-            <a class="px-2 fs-4 fw-bold" href="me.html"> <span>About Me</span></a>
+            <a class="px-2 fs-4 fw-bold" href="index.html"> <span class="text-pop-up-top">Porfolio</span> </a>
+            <a class="px-2 fs-4 fw-bold" href="me.html"> <span class="text-pop-up-top">About Me</span></a>
         </div>
     </header>
     <hr class="color-b4 mb-0" style="height: 5px;" />
@@ -30,16 +30,16 @@
         <main class="d-flex justify-content-center">
 
                 <div class="col-lg-6 col-md-7  col-12">
-                    <div id="carouselExampleInterval" class="my-3 container carousel slide p-0"
+                    <div id="carouselExampleInterval" class="my-3 container carousel slide p-0 scale-in-ver-center"
                     data-bs-ride="carousel">
                     <div class="carousel-inner border border-white border-4 rounded p-0 m-0">
-                        <div class="carousel-item active" data-bs-interval="5000">
+                        <div class="carousel-item scale-in-ver-center active" data-bs-interval="5000">
                             <img src="img/descarga.jpg" class="d-block w-100" height="400" alt="...">
                         </div>
-                        <div class="carousel-item" data-bs-interval="5000">
+                        <div class="carousel-item scale-in-ver-center " data-bs-interval="5000">
                             <img src="img/descarga2.jpg" class="d-block w-100" height="400" width="800" alt="...">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item scale-in-ver-center ">
                             <img src="img/descarga3.jpg" class="d-block w-100" height="400" alt="...">
                         </div>
                     </div>
@@ -63,7 +63,7 @@
         <div class="d-flex container">
             <div class="row mt-3" id="card-container">
                 <h1 class="blanco mb-4"> Projects</h1>
-                <a class="text-end fs-3" href="unrelased.html">UnRelased Proyects <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                <a class="text-end fs-3" href="unrelased.html"> <span class="tracking-in-expand">UnRelased Proyects <i class="fa fa-arrow-right" aria-hidden="true"></i></span> </a>
                 
 
 
@@ -94,6 +94,7 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 
+    <script src="./js/scroll.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
     fetch('./xml/datos.xml') // Reemplaza 'ejemplo.xml' con la ruta correcta de tu archivo XML
@@ -122,7 +123,7 @@
           card.innerHTML = `
         <span>
           
-            <div class="col-12 row shadow py-2">
+            <div class="col-12 row shadow py-2 ">
             
                     <div class="col-md-3 col-12 border rounded-start  border-3 p-0 m-0 d-flex align-items-center ">
                         <div id="carousel${i}" class="carousel slide" data-bs-ride="carousel">
@@ -153,8 +154,8 @@
                     </div>
                     <div class="col-md-9 col-12 border rounded-end blanco  border-3 color-b3 p-3">
                         <a href="${url}" target="_blank">
-                        <h3 class="text-center">${title}</h3>
-                        <br>
+                        <h3 class="text-center bounce-bottom">${title}</h3>
+                        </br>
                         <h5 class="ps-3">Descripcion:</h5>
                         <p class="ps-3">${description}</p>
                         </a>

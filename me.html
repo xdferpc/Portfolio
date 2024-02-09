@@ -21,8 +21,8 @@
     <header class="p-2 d-flex justify-content-between align-items-center color-b2 border-bottom border-top border-white border-4">
         <a href="index.html"><img class="ps-3" src="img/logo2.png" alt="" width="100"> </a>
         <div class="px-2">
-            <a class="px-2 fs-4 fw-bold" href="index.html"> <span>Porfolio</span> </a>
-            <a class="px-2 fs-4 fw-bold" href="me.html"> <span>About Me</span></a>
+            <a class="px-2 fs-4 fw-bold" href="index.html"> <span class="text-pop-up-top">Porfolio</span> </a>
+            <a class="px-2 fs-4 fw-bold" href="me.html"> <span class="text-pop-up-top">About Me</span></a>
         </div>
     </header>
     <hr class="color-b4 mb-0" style="height: 5px;" />
@@ -47,7 +47,7 @@
 
         </div>
         <div class="my-5 row justify-content-center">
-            <form class="col-md-7 col-12 bg-dark border rounded py-3" action="https://formsubmit.co/xdferpcmini@gmail.com" method="POST">
+            <form class="col-md-7 col-12 bg-dark border rounded py-3" action="https://formspree.io/f/mpzvpgjv" method="POST" id="miFormulario">
                 <h1> Contact Me</h1>
                 <div class="mb-3">
                   <label for="nombre" class="form-label">Nombre:</label>
@@ -124,6 +124,27 @@
         // Configurar un temporizador para actualizar cada año (aproximadamente cada 1000 ms * 60 s * 60 min * 24 h * 365.25 d)
         setInterval(actualizarEdad, 1000 * 60 * 60 * 24 * 365.25);
     </script>
+
+<script>
+    document.getElementById('miFormulario').addEventListener('submit', function(e) {
+      e.preventDefault(); // Evita el envío normal del formulario
+      fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this),
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          // Redirigir después del envío exitoso
+          window.location.href = 'https://www.xdferpc.com';
+        } else {
+          alert('Ocurrió un error. Por favor, inténtalo de nuevo.');
+        }
+      });
+    });
+</script>
+
 </body>
 
 </html>
